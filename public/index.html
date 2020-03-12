@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="css/menu1.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link href="https://fonts.googleapis.com/css?family=Modak&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+        <script src="like_button.js"></script>
+      
+        <title>Cuong Blog</title>
+    </head>
+    <body>
+        
+        <header class="d-flex bg-gradient flex-sm-row">
+            <div class="mr-auto rtl" >
+                <a href="#" class="ml-3 logo rtl">CuongNV</a>
+            </div>
+            <div class="align-self-center p-2">
+                <div id="menu" class="d-flex justify-content-end">
+                    <a  href="#" class="d-sm-none d-flex " style="text-decoration:none;">
+                        <i class="material-icons" style="color: white;vertical-align: middle;font-size: 36px;">menu</i>
+                    </a>
+                </div>
+                <script>
+                    var count=1;
+                    $(document).ready(function(){
+                        $("#menu").click(function(){
+                            var list=document.getElementById("menubar");
+                            var idx,leng=list.length;
+                            for(idx=0;idx<leng;idx++){
+                                list[idx].classList.remove("ltr");
+                            }
+                            var menu=$("#menu2");
+                            if(count%2){ 
+                                menu.addClass("d-flex");
+                                menu.slideDown("slow");
+                            }
+                            else{
+                                menu.removeClass("d-flex");
+                            }
+                            count++;
+                        });
+                    });
+                </script>
+                <div id="menu1" style="display: none;">hello</div>
+            <div class="d-flex">
+                <nav id="menu2" class=" align-self-end navbar-nav-scroll navbar-expand-sm navbar-light justify-content-end p-0 d-none d-sm-flex">
+                    <ul class="navbar-nav pb-0 mb-0 flex-column flex-sm-row d-flex" style="font-family: 'Roboto', sans-serif; ">
+                        <li  class="nav-item pr-3 d-flex pl-0">
+                            <a id="menubar" href="#" class="pl-0 mn nav-link font-menu1 cool-link ltr" style="color:#ffffff;"><i class="d-none d-sm-block material-icons" style="color: #ffffff;vertical-align: middle;">house</i></a>
+                        </li>
+                        <li class="nav-item pr-3 dropdown cool-link">
+                            <a id="menubar" href="#" class="mn nav-link font-menu1 p-0 ltr dropdown-toggle drop" data-toggle="dropdown" style="color:#ffffff;"><i class="material-icons" style="vertical-align:middle">keyboard</i>Tutorials</a>
+                            <div class="dropdown-menu w-50">
+                                <a href="" class="dropdown-item">Basic</a>
+                                <a href="" class="dropdown-item">Advance</a>
+                            </div>
+                        </li>
+                        <li class="nav-item pr-3">
+                            <a id="a1" href="#" class="pl-0 mn nav-link font-menu1 cool-link ltr" style="color:#ffffff;"><i class="material-icons" style="color: #ffffff;vertical-align: middle;">fingerprint</i> Security</a>
+                        </li>
+                        <li class="nav-item pr-3">
+                            <a href="#" id="menubar" class="pl-0 mn nav-link font-menu1 cool-link ltr" style="color:#ffffff;"><i class="material-icons" style="vertical-align: middle;">event_note</i> News</a>
+                        </li>
+                        <li class="nav-item pr-3 ltr">
+                            <a href="#" id="menubar" class="pl-0 mn nav-link font-menu1 cool-link" style="color:#ffffff">
+                                <i class="material-icons" style="vertical-align: middle;color: #ffffff;">person</i>Contact</a>
+                        </li>
+                    </ul>
+                    <script>
+                        var mn=document.getElementsByClassName("mn");
+                        var size=mn.length;
+                        var s=0.8;
+                        for(var i=size-1;i>=0;i--){
+                            mn[i].style.animationDuration=""+s+"s";
+                            s+=0.2;
+                        }
+                    </script>
+                </nav>
+            </div>
+        </header>
+        <div id="root"></div>
+        <div class="container ">
+            <div class ="row ">
+                <div class="col-sm-6 order-sm-1 p-2 p-sm-5 ">
+                    <div class="d-flex justify-content-center align-self-center content">
+                        <img src="img/py_language.png" class="img-content" alt="pylang">
+                    </div>
+                </div>
+                <div class="col-sm-6 order-sm-2 p-2 p-sm-5">
+                    <h2 class="headding">Python cơ bản</h2>
+                    <p>Python hiện đang là ngôn ngữ rất phổ biến hiện nay, nó là một ngôn ngữ thông dịch có cú pháp ngắn gọn dễ hiểu, nhưng khuyên bạn nên học C/C++ trước khi học python. </p>
+                    <div class="row ">   
+                        <div class="col-sm p-2 p-sm-5 justify-content-center d-flex" >
+                            <div class="w-100 btn btn-outline-primary btn_content p-2 px-sm-3 ">Học ngay</div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-sm-6 p-2 p-sm-5 jus">
+                    <div class="d-flex justify-content-center content">
+                        <img class="img-content" src="img/img_machineLearning3.png" alt="img_machineLearning3">
+                    </div>
+                </div>
+                <div class="col-sm-6 p-2 p-sm-5">
+                    <h2 class="headding">Machine Learning Basic</h2>
+                    <p>Series bài học này sẽ giúp bạn tiếp cận Machine Learning cơ bản một cách trực quan nhất, sau chuỗi bài học bạn sẽ có hiểu biết nhất định về học máy.</p>
+                    <div class="row">
+                        <div class="col-sm p-2 p-sm-5 justify-content-center d-flex">
+                            <div class="w-100 btn btn-outline-success btn_content p-2 px-sm-3">Học ngay</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="container-fluid bg-dark">
+            <div class="row">
+                <div class="col-sm justify-content-center">
+                    <p>&copy Nguyễn Văn Cường</p>
+                    <p>Phone: 0989839428</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
+
